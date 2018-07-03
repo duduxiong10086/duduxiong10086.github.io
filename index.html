@@ -91,14 +91,17 @@
 <li>2.x版本是之前的版本，截止到2020年，只进行安全性方面的更新，不再添加新的功能。虽然很多项目仍然在使用2.x版本，但迁移到3.x版本是很容易的  </li>
 </ul>
 <p>你可以在<a href="python.org">这里</a>下载并安装任意一个版本。比较下两个版本的不同。另外，一些第三方会提供Python的重新打包版本，会附带一些常用的图书库和其它的功能，例如数学，数据分析，科学上的应用等。在官方网站上查看这些<a href="python.org">列表</a>。  </p>
-<h3 id="检查Python是否已经安装"><a href="#检查Python是否已经安装" class="headerlink" title="检查Python是否已经安装"></a>检查Python是否已经安装</h3><p>为了确认你的Python是否正确安装，你可以在你最爱的终端上输入以下指令来确认（如果你是Windows系统，你需要提前为Python设置好环境变量，之后在cmd窗口输入下面的指令）：<br><code>$ python --version</code>  </p>
-<p><code>Python 3.x Version ≥ 3.0</code>  </p>
-<p>如果你已经安装了Python3版本，并且这个就是你的默认版本（你可以在<strong>Troubleshooting</strong>了解更多细节） 你应该看到以上内容； </p>
-<p><code>$ python --version</code></p>
-<p><code>Python 3.6.0</code><br><code>Python 2.x Version ≤ 2.7</code>  </p>
-<p>如果你已经安装了Python2版本，并且这个就是你的默认版本（你可以在<strong>Troubleshooting</strong>了解更多细节） 你应该看到以上内容；<br><code>$ python --version</code>  </p>
-<p><code>Python 2.7.13</code>  </p>
-<p>如果你已经安装了Python3版本，但是输出却是2.x的版本，说明你也安装了Python2版本。这种情况经常在MacOS和Linux分布式系统上出现，你可以用$ python3代替。</p>
+<h3 id="检查Python是否已经安装"><a href="#检查Python是否已经安装" class="headerlink" title="检查Python是否已经安装"></a>检查Python是否已经安装</h3><p>为了确认你的Python是否正确安装，你可以在你最爱的终端上输入以下指令来确认（如果你是Windows系统，你需要提前为Python设置好环境变量，之后在cmd窗口输入下面的指令）：    </p>
+<pre><code>$ python --version  
+Python 3.x Version ≥ 3.0 
+</code></pre><p>如果你已经安装了Python3版本，并且这个就是你的默认版本（你可以在<strong>Troubleshooting</strong>了解更多细节） 你应该看到以上内容； </p>
+<pre><code>$ python --version 
+Python 3.6.0   
+Python 2.x Version ≤ 2.7  
+</code></pre><p>如果你已经安装了Python2版本，并且这个就是你的默认版本（你可以在<strong>Troubleshooting</strong>了解更多细节） 你应该看到以上内容；</p>
+<pre><code>$ python --version
+Python 2.7.13
+</code></pre><p>如果你已经安装了Python3版本，但是输出却是2.x的版本，说明你也安装了Python2版本。这种情况经常在MacOS和Linux分布式系统上出现，你可以用$ python3代替。</p>
 <h3 id="使用IDLE在python上输出Hello-World"><a href="#使用IDLE在python上输出Hello-World" class="headerlink" title="使用IDLE在python上输出Hello, World"></a>使用IDLE在python上输出Hello, World</h3><p><a href="python.org">IDLE</a>是一种简易编辑器，和python捆绑在一起出现。</p>
 <h3 id="如何在IDLE上创建一个Hello-World程序"><a href="#如何在IDLE上创建一个Hello-World程序" class="headerlink" title="如何在IDLE上创建一个Hello, World程序"></a>如何在IDLE上创建一个Hello, World程序</h3><ul>
 <li>在你选定的系统中打开<strong>IDLE</strong><ul>
@@ -109,15 +112,20 @@
 </li>
 <li>它会打开命令解析器（shell）窗口，在窗口上面有选项。  </li>
 </ul>
-<p>在命令解析器（shell）窗口中，会有三个直角三角形指示符（&gt;&gt;&gt;）<br>现在在指示符后面写下如下代码：<br><code>print(&quot;Hello, World&quot;)</code><br>按下Enter会显示以下结果：<br>Hello, World</p>
-<h3 id="Hello-World-Python文件"><a href="#Hello-World-Python文件" class="headerlink" title="Hello World Python文件"></a>Hello World Python文件</h3><p>创建一个叫做hello.py文件，里面包含以下内容：<br>对于Python 3.x Version ≥ 3.0版本：<br><code>print(&#39;Hello, World&#39;)</code><br>对于Python 2.x Version ≥ 2.6版本，你可以通过导入future模块里的来使用Python 3.x Version ≥ 3.0版本里的<strong>print</strong>功能：  </p>
-<p><code>from __future__ import print_function</code>  </p>
-<p>Python 2有很多可选功能可以从Python 3中导入使用。<br>在Python 2版本里，你也可以像下面这样写，但这个在Python 3里是不合法的，因此不推荐使用因为它减弱了跨版本代码兼容性。  </p>
-<p><code>print &#39;Hello, World&#39;</code></p>
-<p>在你的终端，找到hello.py文件。<br>输入python hello.py，然后按下Enter键：    </p>
-<p><code>$ python hello.py</code>  </p>
-<p><code>Hello, World</code>  </p>
-<p>你应该看到Hello, World输出在控制台上。<br>你也可以用文件路径替换<code>$ python hello.py</code> ，比如你文件放在Linux里的home/user/hello.py，你也可以写python /home/user/hello.py。</p>
+<p>在命令解析器（shell）窗口中，会有三个直角三角形指示符（&gt;&gt;&gt;）<br>现在在指示符后面写下如下代码： </p>
+<pre><code>print(&quot;Hello, World&quot;)
+</code></pre><p>按下Enter会显示以下结果： </p>
+<pre><code>Hello, World
+</code></pre><h3 id="Hello-World-Python文件"><a href="#Hello-World-Python文件" class="headerlink" title="Hello World Python文件"></a>Hello World Python文件</h3><p>创建一个叫做hello.py文件，里面包含以下内容：<br>对于Python 3.x Version ≥ 3.0版本：</p>
+<pre><code>print(&apos;Hello, World&apos;)
+</code></pre><p>对于Python 2.x Version ≥ 2.6版本，你可以通过导入future模块里的来使用Python 3.x Version ≥ 3.0版本里的<strong>print</strong>功能：  </p>
+<pre><code>from __future__ import print_function
+</code></pre><p>Python 2有很多可选功能可以从Python 3中导入使用。<br>在Python 2版本里，你也可以像下面这样写，但这个在Python 3里是不合法的，因此不推荐使用因为它减弱了跨版本代码兼容性。  </p>
+<pre><code>print &apos;Hello, World&apos;
+</code></pre><p>在你的终端，找到hello.py文件。<br>输入python hello.py，然后按下Enter键：    </p>
+<pre><code>$ python hello.py
+Hello, World
+</code></pre><p>你应该看到Hello, World输出在控制台上。<br>你也可以用文件路径替换<code>$ python hello.py</code> ，比如你文件放在Linux里的home/user/hello.py，你也可以写python /home/user/hello.py。</p>
 <h3 id="启动交互式python-shell"><a href="#启动交互式python-shell" class="headerlink" title="启动交互式python shell"></a>启动交互式python shell</h3><p>通过在终端中执行（运行）Python命令，您将得到一个交互式Python shell.也叫做REPL。<br>python 2  </p>
 <pre><code>$ python
 Python 2.7.12 (default, Jun 28 2016, 08:46:01)[GCC 6.1.1 20160602] on linux
@@ -142,7 +150,7 @@ Hello, World
 </ul>
 <p>例如：  </p>
 <blockquote>
-<p>免责声明：文档作者不与下面列出的任何资源相关。  </p>
+<p>免责声明：文档作者不与下面列出的任何资源相关。</p>
 <ul>
 <li><a href="https://www.python.org/shell/" target="_blank" rel="noopener">https://www.python.org/shell/</a>-官方网站提供的网上脚本；</li>
 <li><a href="https://ideone.com/" target="_blank" rel="noopener">https://ideone.com/</a>-在网络上广泛用于说明代码片断的运行  ；</li>
@@ -152,11 +160,12 @@ Hello, World
 </ul>
 </blockquote>
 <h3 id="以字符串形式运行命令"><a href="#以字符串形式运行命令" class="headerlink" title="以字符串形式运行命令"></a>以字符串形式运行命令</h3><p>Python可以在shell中作为字符串传递任意代码：</p>
-<p><code>$ python -c &#39;print(&quot;Hello, World&quot;)</code></p>
-<p><code>Hello, World</code></p>
-<h3 id="Shells及其它"><a href="#Shells及其它" class="headerlink" title="Shells及其它"></a>Shells及其它</h3><p>PyPa管理——PyPa推荐的安装Python包的工具是PIP。安装，在您的<br>命令行执行PIP安装&gt;包名称&gt;。例如，PIP安装NUMPY。（注：在Windows上）必须将PIP添加到路径环境变量中。为了避免这一点，使用Python -M PIP安装程序包名称&gt;。<br>Shells-到目前为止，我们已经讨论了使用Python的原生交互shell来运行代码的不同方法。shell使用Python解释代码实时性的解释力。替代shell包括闲置-预捆绑GoalkCyr.Python®注释专业人士6GUI，IPython——用于扩展交互体验等。<br>程序-对于长期存储，可以将内容保存到.pY文件，并将其编辑或执行为脚本或程序。使用外部工具，例如Shell、IDE（如PyCharm）、Jupyter笔记本等。中间用户可以使用这些工具。但是，这里讨论的方法足以启动。<br>Python教程允许你通过Python代码，这样你就可以可视化程序将如何流动，并帮助你。了解程序出错的地方。<br>PEP8定义了对Python代码进行格式化的指导原则。格式化代码很重要，这样你就可以快速阅读什么内容了，代码确实如此。  </p>
-<h2 id="1-2-创建变量并赋值"><a href="#1-2-创建变量并赋值" class="headerlink" title="1.2 创建变量并赋值"></a>1.2 创建变量并赋值</h2><p>在Python中创建变量，你需要为变量具体一个名字并赋值。<br><code>&lt;variable name&gt; = &lt;value&gt;</code>  </p>
-<p>python用=来给变量赋值，不需要在变量前面声明该变量类型，该变量类型与赋值的类型一致，变量必须要初始化。</p>
+<pre><code>$ python -c &apos;print(&quot;Hello, World&quot;)
+Hello, World
+</code></pre><h3 id="Shells及其它"><a href="#Shells及其它" class="headerlink" title="Shells及其它"></a>Shells及其它</h3><p>PyPa管理——PyPa推荐的安装Python包的工具是PIP。安装，在您的<br>命令行执行PIP安装&gt;包名称&gt;。例如，PIP安装NUMPY。（注：在Windows上）必须将PIP添加到路径环境变量中。为了避免这一点，使用Python -M PIP安装程序包名称&gt;。<br>Shells-到目前为止，我们已经讨论了使用Python的原生交互shell来运行代码的不同方法。shell使用Python解释代码实时性的解释力。替代shell包括闲置-预捆绑GoalkCyr.Python®注释专业人士6GUI，IPython——用于扩展交互体验等。<br>程序-对于长期存储，可以将内容保存到.pY文件，并将其编辑或执行为脚本或程序。使用外部工具，例如Shell、IDE（如PyCharm）、Jupyter笔记本等。中间用户可以使用这些工具。但是，这里讨论的方法足以启动。<br>Python教程允许你通过Python代码，这样你就可以可视化程序将如何流动，并帮助你。了解程序出错的地方。<br>PEP8定义了对Python代码进行格式化的指导原则。格式化代码很重要，这样你就可以快速阅读什么内容了，代码确实如此。  </p>
+<h2 id="1-2-创建变量并赋值"><a href="#1-2-创建变量并赋值" class="headerlink" title="1.2 创建变量并赋值"></a>1.2 创建变量并赋值</h2><p>在Python中创建变量，你需要为变量具体一个名字并赋值。</p>
+<pre><code>&lt;variable name&gt; = &lt;value&gt; 
+</code></pre><p>python用=来给变量赋值，不需要在变量前面声明该变量类型，该变量类型与赋值的类型一致，变量必须要初始化。</p>
 <pre><code># Integer
 a = 2   
 print(a)
@@ -201,11 +210,22 @@ print(x)
 print(keyword.kwlist)  
 </code></pre><p>变量命名规则：</p>
 <ol>
-<li>变量名首字母必须为字母或下划线：<br> x = True # valid<br> _y = True # valid<br> 9x = False # starts with numeral<br> =&gt; SyntaxError: invalid syntax<br> $y = False # starts with symbol<br> =&gt; SyntaxError: invalid syntax      </li>
-<li>剩下部分由字母、数字或下划线组成：<br><code>has_0_in_it = &quot;Still Valid&quot;</code>   </li>
+<li><p>变量名首字母必须为字母或下划线：</p>
+<pre><code>x = True # valid          
+_y = True # valid    
+9x = False # starts with numeral    
+=&gt; SyntaxError: invalid syntax     
+$y = False # starts with symbol      
+=&gt; SyntaxError: invalid syntax   
+</code></pre></li>
+<li><p>剩下部分由字母、数字或下划线组成：   </p>
+<pre><code>has_qinit = &quot;Still Valid&quot;      
+</code></pre></li>
 <li><p>后面调用的变量在前面必须有定义：</p>
-<p> x = 9<br> y = X*5<br> =&gt;NameError: name ‘X’ is not defined    </p>
-</li>
+<pre><code>x = 9    
+y = X*5    
+=&gt;NameError: name &apos;X&apos; is not defined    
+</code></pre></li>
 </ol>
 <p>即使在Python中声明变量时也不需要指定数据类型，而分配变量内存中的必要区域，Python解释器自动选择最合适的内置类型：   </p>
 <pre><code>a = 2
@@ -229,8 +249,9 @@ print(type(q))
 x = None
 print(type(x))
 # Output: &lt;type &apos;NoneType&apos;&gt;
-</code></pre><p>当使用=执行赋值操作时，左边的=右边的对象的名称。最后，将右边的对象的引用分配给左边的名称。想当于：左边是指针，指向右边起始地址，如果是变量，指向给该变量分配的内存地址。<br><code>a_name = an_object # &quot;a_name&quot; is now a name for the reference to the object &quot;an_object&quot;</code> </p>
-<p>因此，从上面的许多赋值例子中，如果我们选择pi＝3.14，那么pi是一个名字（不是名字，因为对象3.14可以有多个名称。）如果你不理解下面的内容，回到这一点。再看一遍！此外，你可以看看这个，以便更好地理解。   </p>
+</code></pre><p>当使用=执行赋值操作时，左边的=右边的对象的名称。最后，将右边的对象的引用分配给左边的名称。想当于：左边是指针，指向右边起始地址，如果是变量，指向给该变量分配的内存地址。  </p>
+<pre><code>a_name = an_object # &quot;a_name&quot; is now a name for the reference to the object &quot;an_object&quot;
+</code></pre><p>因此，从上面的许多赋值例子中，如果我们选择pi＝3.14，那么pi是一个名字（不是名字，因为对象3.14可以有多个名称。）如果你不理解下面的内容，回到这一点。再看一遍！此外，你可以看看这个，以便更好地理解。   </p>
 <p>可以将多个值赋给一行中的多个变量。注意，两边个数要一样：  </p>
 <pre><code>a, b, c = 1, 2, 3
 print(a, b, c)
@@ -245,35 +266,66 @@ a, b = 1, 2, 3
 =&gt; File &quot;name.py&quot;, line N, in &lt;module&gt;
 =&gt; a, b = 1, 2, 3
 =&gt; ValueError: too many values to unpack
-</code></pre><p>最后一个例子可以在左边多加任意一个名字来避免错误，一般这种哑变量可以用任意名字，但常用下划线-代替：<br>    a, b, _ = 1, 2, 3<br>    print(a, b)       </p>
-<pre><code># Output: 1, 2  
+</code></pre><p>最后一个例子可以在左边多加任意一个名字来避免错误，一般这种哑变量可以用任意名字，但常用下划线-代替： </p>
+<pre><code>a, b, _ = 1, 2, 3   
+print(a, b)       
+# Output: 1, 2  
 </code></pre><p>你也可以把一个值同时赋值给多个变量：    </p>
-<p><code>a = b = c = 1</code><br><code>print(a, b, c)</code>  </p>
-<p>使用这种赋值法，要注意：这三个名字指向同一个内存地址，在之后改变其中一个变量值，并不会对其他两个变量带来影响：</p>
+<pre><code>a = b = c = 1 
+print(a, b, c)  
+</code></pre><p>使用这种赋值法，要注意：这三个名字指向同一个内存地址，在之后改变其中一个变量值，并不会对其他两个变量带来影响：</p>
 <pre><code>a = b = c = 1 # all three names a, b and c refer to same int object with value 1
 print(a, b, c)
 # Output: 1 1 1
 b = 2 # b now refers to another int object, one with a value of 2
 print(a, b, c)
 # Output: 1 2 1 *so output is as expected.*
-</code></pre><p>以上也适用于可变类型（如list、dict等），就像不可变类型（如int、String一样）：<br><code>x = y = [7, 8, 9]   `</code># x and y refer to the same list object just created, [7, 8, 9]<code></code>x = [13, 8, 9]<code># x now refers to a different list object just created, [13, 8, 9]`
-`print(y)</code> # y still refers to the list it was first assigned<code></code># Output: [7, 8, 9]`  </p>
-<p>到现在为止，一直都还不错。在修改对象时，情况有点不同（与分配名称相反）当级联赋值用于可变类型时，我们执行了一个不同的对象。看一看<br>下面，你将首先看到它：<br><code>x = y = [7, 8, 9]</code><br><code># x and y are two different names for the same list object just created, [7,8, 9]</code><br><code>x[0] = 13</code><br><code># we are updating the value of the list [7, 8, 9] through one of its names, xin this case</code><br><code>print(y) # printing the value of the list using its other name</code><br><code># Output: [13, 8, 9] # hence, naturally the change is reflected</code></p>
-<p>嵌套列表在Python也是合法的，这意味着列表元素可以为列表：<br><code>x = [1, 2, [3, 4, 5], 6, 7] # this is nested list</code><br><code>print x[2]</code><br><code># Output: [3, 4, 5]</code><br><code>print x[2][1]</code><br><code># Output: 4</code>      </p>
-<p>最后，变量名的类型是可以改变的，自动变成右边赋值的类型：<br><code>a = 2</code><br><code>print(a)</code><br><code># Output: 2</code><br><code>a = &quot;New value&quot;</code><br><code>print(a)</code><br><code># Output: New value</code></p>
-<p>相当于左边指针，右边分配内存，指针自动指向该内存，类型与右边值一致。</p>
+</code></pre><p>以上也适用于可变类型（如list、dict等），就像不可变类型（如int、String一样）：</p>
+<pre><code>x = y = [7, 8, 9]   # x and y refer to the same list object just created, [7, 8, 9]
+x = [13, 8, 9] # x now refers to a different list object just created, [13, 8, 9]
+print(y) # y still refers to the list it was first assigned
+# Output: [7, 8, 9] 
+</code></pre><p>到现在为止，一直都还不错。在修改对象时，情况有点不同（与分配名称相反）当级联赋值用于可变类型时，我们执行了一个不同的对象。看一看<br>下面，你将首先看到它：  </p>
+<pre><code>x = y = [7, 8, 9]  # x and y are two different names for the same list object just created, [7,8, 9]
+x[0] = 13  # we are updating the value of the list [7, 8, 9] through one of its names, xin this case
+print(y)   # printing the value of the list using its other name
+# Output: [13, 8, 9]  # hence, naturally the change is reflected
+</code></pre><p>嵌套列表在Python也是合法的，这意味着列表元素可以为列表：</p>
+<pre><code>x = [1, 2, [3, 4, 5], 6, 7] # this is nested list
+print x[2]  
+# Output: [3, 4, 5]  
+print x[2][1] 
+# Output: 4      
+</code></pre><p>最后，变量名的类型是可以改变的，自动变成右边赋值的类型：</p>
+<pre><code>a = 2 
+print(a) 
+# Output: 2  
+a = &quot;New value&quot;  
+print(a)  
+# Output: New value
+</code></pre><p>相当于左边指针，右边分配内存，指针自动指向该内存，类型与右边值一致。</p>
 <h2 id="1-3-代码块缩进"><a href="#1-3-代码块缩进" class="headerlink" title="1.3 代码块缩进"></a>1.3 代码块缩进</h2><p>Python使用缩进来定义控制和循环结构。这会让程序具有可读性，但是程序员要注意空格的使用。  </p>
 <p>Python使用冒号和缩进来表明模块的开始和结束，其它语言不一定这样。Python中的模块像函数、循环、分支等其他结构是没有结束判定符的，全是用冒号开始加上下面缩进的内容：</p>
-<p><code>def my_function(): # This is a function definition. Note the colon (:)</code><br>&ensp;&ensp;&ensp;&ensp;<code>a = 2 # This line belongs to the function because it&#39;s indented</code><br>&ensp;&ensp;&ensp;&ensp;<code>return a # This line also belongs to the same function</code><br><code>print(my_function()) # This line is OUTSIDE the function block</code>     </p>
-<p>or </p>
-<p><code>if a &gt; b: # If block starts here</code><br>&ensp;&ensp;&ensp;&ensp;<code>print(a) # This is part of the if block</code><br><code>else: # else must be at the same level as if</code><br>&ensp;&ensp;&ensp;&ensp;<code>print(b) # This line is part of the else block</code></p>
-<p>包含一个单行语句的块可以放在同一行上，但一般不推荐使用：</p>
-<p><code>if a &gt; b: print(a)</code><br><code>else: print(b)</code></p>
-<p>如果不是一个语句块这样写就会出现错误：</p>
-<p><code>if x &gt; y: y = x</code><br><code>print(y) # IndentationError: unexpected indent</code><br><code>if x &gt; y: while y != z: y -= 1 # SyntaxError: invalid syntax</code></p>
-<p>空块也会导致错误，当模块内容为空时用关键字<strong>pass</strong>代替：</p>
-<p><code>def will_be_implemented_later():</code><br>&ensp;&ensp;&ensp;&ensp;<code>pass</code></p>
-<h3 id="Spaces-vs-Tabs"><a href="#Spaces-vs-Tabs" class="headerlink" title="Spaces vs. Tabs"></a>Spaces vs. Tabs</h3><p>通常用四个空格缩进。<br>使用Tabs缩进也是可以的除了PEP 8,它更喜欢空格缩进。<br>Python 3.x Version ≥ 3.0<br>Python 3.x不允许这两者混用，在这种情况下，编译时错误生成：在缩进中不一致地使用制表符和空格，程序将不运行。<br>Python 2.x Version ≤ 2.7<br>Python 2.x允许混用，但这非常不提倡使用。    \t缩进是八个Spaces倍数。虽然有的编辑器会把Tab配置成4个Spaces，但可能会出现微小的错误。</p>
+<pre><code>def my_function():  # This is a function definition. Note the colon (:)         
+    a = 2  # This line belongs to the function because it&apos;s indented       
+    return a  # This line also belongs to the same function
+print(my_function())   # This line is OUTSIDE the function block     
+</code></pre><p>or </p>
+<pre><code>if a &gt; b: # If block starts here
+    print(a) # This is part of the if block  
+else: # else must be at the same level as if  
+    print(b) # This line is part of the else block
+</code></pre><p>包含一个单行语句的块可以放在同一行上，但一般不推荐使用：</p>
+<pre><code>if a &gt; b: print(a)
+else: print(b)
+</code></pre><p>如果不是一个语句块这样写就会出现错误：</p>
+<pre><code>if x &gt; y: y = x 
+print(y) # IndentationError: unexpected indent  
+if x &gt; y: while y != z: y -= 1 # SyntaxError: invalid syntax
+</code></pre><p>空块也会导致错误，当模块内容为空时用关键字<strong>pass</strong>代替：</p>
+<pre><code>def will_be_implemented_later():  
+    pass
+</code></pre><h3 id="Spaces-vs-Tabs"><a href="#Spaces-vs-Tabs" class="headerlink" title="Spaces vs. Tabs"></a>Spaces vs. Tabs</h3><p>通常用四个空格缩进。<br>使用Tabs缩进也是可以的除了PEP 8,它更喜欢空格缩进。<br>Python 3.x Version ≥ 3.0<br>Python 3.x不允许这两者混用，在这种情况下，编译时错误生成：在缩进中不一致地使用制表符和空格，程序将不运行。<br>Python 2.x Version ≤ 2.7<br>Python 2.x允许混用，但这非常不提倡使用。    \t缩进是八个Spaces倍数。虽然有的编辑器会把Tab配置成4个Spaces，但可能会出现微小的错误。</p>
 <blockquote>
 <p>PEP 8:<br>在使用-t选项调用Python 2命令行解释器时，它会发出有关代码的警告。<br>非法混合标签和空间。当使用-TT时，这些警告会变成错误。这些选项是强烈推荐！  </p>
 </blockquote>
@@ -286,7 +338,7 @@ print(a, b, c)
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/07/02/Python-1-1-1-3/" data-id="cjj5qspij00016crfolu58apm" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/07/02/Python-1-1-1-3/" data-id="cjj5rkoey0001vcrf43c6pas4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -323,7 +375,7 @@ print(a, b, c)
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/07/02/Pythonic八荣八耻/" data-id="cjj5qspi600006crfjyvnltl1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/07/02/Pythonic八荣八耻/" data-id="cjj5rkoed0000vcrf61qqed1u" class="article-share-link">Share</a>
       
       
     </footer>
@@ -366,7 +418,7 @@ print(a, b, c)
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/07/01/plan/" data-id="cjj5qspiw00036crfjqtjb9yy" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/07/01/plan/" data-id="cjj5rkoge0003vcrfdikvu8zs" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/暑假，计划/">暑假，计划</a></li></ul>
@@ -413,7 +465,7 @@ print(a, b, c)
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/06/29/hello-world/" data-id="cjj5qspir00026crfvozrj83k" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/06/29/hello-world/" data-id="cjj5rkof90002vcrfo2kz5d5r" class="article-share-link">Share</a>
       
       
     </footer>
