@@ -742,6 +742,29 @@ a[::-1]
 </code></pre><p>您可以遍历列表元素：</p>
 <pre><code>for element in my_list:
     print (element)
+</code></pre><h3 id="Tuple元组"><a href="#Tuple元组" class="headerlink" title="Tuple元组"></a>Tuple元组</h3><p>元组类型和list相似，但是他是不可改变的。因此元素不可以改变或者删除。元组经常用于不经常改变的如ID等。元组用小括号而不是中括号：</p>
+<pre><code>ip_address = (&apos;10.20.30.40&apos;, 8080)
+</code></pre><p>list一些规则也适用tuple，可以嵌套，支持多种数据类型。<br>只有一个成员的元组必须这样定义，注意逗号：</p>
+<pre><code>one_member_tuple = (&apos;Only member&apos;,)
+</code></pre><p>or</p>
+<pre><code>one_member_tuple = &apos;Only member&apos;, # No brackets
+</code></pre><p>or</p>
+<pre><code>one_member_tuple = tuple([&apos;Only member&apos;])
+</code></pre><h3 id="dict字典"><a href="#dict字典" class="headerlink" title="dict字典"></a>dict字典</h3><p>字典由关键字和值组成。字典用大括号。</p>
+<pre><code>state_capitals = {&apos;Arkansas&apos;: &apos;Little Rock&apos;,&apos;Colorado&apos;: &apos;Denver&apos;,&apos;California&apos;: &apos;Sacramento&apos;,&apos;Georgia&apos;: &apos;Atlanta&apos;}
+</code></pre><p>可以通过key找到值：</p>
+<pre><code>ca_capital = state_capitals[&apos;California&apos;]
+</code></pre><p>遍历字典：</p>
+<pre><code>for k in state_capitals.keys():
+    print(&apos;{} is the capital of {}&apos;.format(state_capitals[k], k))
+</code></pre><h3 id="集合set"><a href="#集合set" class="headerlink" title="集合set"></a>集合set</h3><p>集合元素无重复，不能插入也不能排序。</p>
+<pre><code>first_names = {&apos;Adam&apos;, &apos;Beth&apos;, &apos;Charlie&apos;}
+
+my_list = [1,2,3]
+my_set = set(my_list)
+</code></pre><p>检查某值是否在集合中：</p>
+<pre><code>if name in first_names:
+    print(name)
 </code></pre>
           
         
